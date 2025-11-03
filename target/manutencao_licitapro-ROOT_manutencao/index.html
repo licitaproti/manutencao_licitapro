@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema em Manutenção</title>
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+        <style>
+            :root {
+                --bg-gradient: linear-gradient(135deg, #224069, #00aaff);
+                --text-light: #f8f9fa;
+            }
+
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: var(--bg-gradient);
+                color: var(--text-light);
+                font-family: "Lato", sans-serif;
+                text-align: center;
+            }
+
+            .maintenance-box {
+                background-color: rgba(255, 255, 255, 0.15);
+                border-radius: 1rem;
+                padding: 2.5rem 3rem;
+                max-width: 500px;
+                width: 90%;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(8px);
+                animation: fadeIn 0.8s ease-in-out;
+            }
+
+            .maintenance-box i {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+                color: #ffc107;
+            }
+
+            h1 {
+                font-weight: 700;
+                font-size: 2rem;
+            }
+
+            p {
+                margin-top: 1rem;
+                font-size: 1.1rem;
+            }
+
+            .spinner-border {
+                margin-top: 1.5rem;
+                width: 3rem;
+                height: 3rem;
+                color: #fff;
+            }
+
+            footer {
+                position: fixed;
+                bottom: 10px;
+                width: 100%;
+                text-align: center;
+                font-size: 0.9rem;
+                color: #e0e0e0;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @media (max-width: 576px) {
+                .maintenance-box {
+                    padding: 2rem 1.5rem;
+                }
+                h1 {
+                    font-size: 1.6rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="maintenance-box">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h1>Sistema em Manutenção</h1>
+            <p>Estamos realizando atualizações para melhorar sua experiência.<br>
+                Por favor, aguarde alguns instantes.</p>
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Carregando...</span>
+            </div>
+        </div>
+
+        <footer>
+            &copy; <span id="ano"></span> - Licitapro | Todos os direitos reservados.
+        </footer>
+
+        <script>
+            document.getElementById("ano").textContent = new Date().getFullYear();
+        </script>
+    </body>
+</html>
+
