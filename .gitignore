@@ -1,0 +1,34 @@
+# Maven build directory
+/target/
+
+/build/
+/dist/
+
+# IDE e configurações
+nb-configuration.xml
+_connector
+/nbproject/
+/.env
+/.bat
+
+db.config.json
+database.properties
+build.xml
+build-impl.xml
+nb-configuration.xml
+
+# Bibliotecas e ambientes
+/node_modules/
+/venv/
+/lib/
+
+# Deploy Java Web
+/WEB-INF/
+/META-INF/
+
+# Arquivos gerados e temporários
+*.log
+*.swp
+
+# Arquivo da chave
+secrets.jceks
